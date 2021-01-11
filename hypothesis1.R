@@ -60,3 +60,31 @@ chisq.test(table(Observed.Values,East))
 chisq.test(table(Observed.Values,West))
 chisq.test(table(Observed.Values,North))
 chisq.test(table(Observed.Values,South))
+
+Fantaloons <- read.csv(file.choose())
+View(Fantaloons)
+attach(Fantaloons)
+
+table4 <- table(Weekdays,Weekend)
+table4
+
+?prop.test
+prop.test(x=c(58,152),n=c(480,740),conf.level = 0.95,correct = FALSE,alternative = "two.sided")
+
+###Unequal proportion
+
+prop.test(x=c(58,152),n=c(480,740),conf.level = 0.95,correct = FALSE,alternative = "less")
+
+LabTAT <- read.csv(file.choose())
+View(LabTAT)
+attach(LabTAT)
+
+table5 <- table(Laboratory.1,Laboratory.2,Laboratory.3,Laboratory.4)
+table5
+
+?prop.test
+prop.test(x=c(58,152),n=c(480,740),conf.level = 0.95,correct = FALSE,alternative = "two.sided")
+
+###Unequal proportion
+
+prop.test(x=c(58,152),n=c(480,740),conf.level = 0.95,correct = FALSE,alternative = "less")
