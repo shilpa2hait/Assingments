@@ -1,1 +1,11 @@
 
+import pandas as pd
+data = pd.read_csv("D:/ExcelR/Linear Regression/Salary_Data.csv")
+data.head()
+data.corr()
+
+import statsmodels.formula.api as smf
+
+model= smf.ols("YearsExperience~Salary",data = data).fit()
+
+model.summary()
